@@ -45,7 +45,7 @@ export default function Login() {
 								name="password"
 							/>
 						</div>
-						<button type="submit" className="btn btn-primary">Submit</button>
+						<button type="submit" className="btn btn-dark">Submit</button>
 					</form>
 				</section>
 			</div>

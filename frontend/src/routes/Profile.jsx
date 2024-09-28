@@ -44,10 +44,10 @@ export function Profile() {
 			<div className="row mt-5">
 				<div className="col-6">
 					<div>
-						<p><strong>User Name</strong>: {user.userName}</p>
+						<p><strong>Welcome back</strong> {user.userName}</p>
 						<p><strong>Email</strong>: {user.email}</p>
 						{loggedInUser?._id === user._id
-							? <Link to="/logout" className="col-3 btn btn-primary">Logout</Link>
+							? <Link to="/logout" className="col-3 btn btn-dark">Logout</Link>
 							: null}
 						
 					</div>
@@ -335,7 +335,7 @@ export function Profile() {
 								<input type="text" className="form-control" id="cp" name="cp"/>
 							</div>
 
-							<button type="submit" className="btn btn-primary" value="Upload">Submit</button>
+							<button type="submit" className="btn btn-dark mb-5" value="Upload">Submit</button>
 						</form>
 					</div>
 				</div>
