@@ -18,7 +18,7 @@ export default function Feed() {
 	};
 
 	return (
-		<div className="container">
+		<div className="container min-vh-100">
 			<ul className="nav nav-pills nav-fill" role="tablist">
 				<li className="nav-item">
 					<button className={`nav-link` + (tab === 'public' ? ' active' : '')} role="tab" aria-selected={tab === 'public'} onClick={handleTabChange}>Public</button>

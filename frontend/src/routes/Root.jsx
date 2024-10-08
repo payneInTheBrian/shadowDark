@@ -25,16 +25,17 @@ export default function Root({ initialUser }) {
   }, []);
 
   return (
-    <>
+    <div className="bg-dark">
       <header className="container">
         <div className="text-center">
-          <h1 className="text-dark"><Link className="text-dark" to={user ? '/profile/' + user.userName : '/'}>Shadow Dark</Link></h1>
+          <h1 className="text-light"><Link className="text-light" to={user ? '/profile/' + user.userName : '/'}>Shadow Dark</Link></h1>
           
-          <span>Character Creation App</span>
+          <h3 className="text-light">Character Creation App</h3>
         </div>
       </header>
+      <main className="purple"></main>
 			<Messages messages={messages} />
       <Outlet context={{ user, setUser, setMessages }} />
-    </>
+    </div>
   );
 }

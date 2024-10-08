@@ -22,30 +22,30 @@ export default function Login() {
 	};
 
 	return (
-		<main className="container">
+		<main className="container min-vh-100">
 			<div className="row justify-content-center">
 				<section className="col-6 mt-5">
 					<form action="/login" method="POST" onSubmit={handleSubmit}>
 						<div className="mb-3">
-							<label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
+							<label htmlFor="exampleInputEmail1" className="form-label text-light">Email address</label>
 							<input
 								type="email"
-								className="form-control"
+								className="form-control purple "
 								id="exampleInputEmail1"
 								aria-describedby="emailHelp"
 								name="email"
 							/>
 						</div>
 						<div className="mb-3">
-							<label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+							<label htmlFor="exampleInputPassword1" className="form-label text-light ">Password</label>
 							<input
 								type="password"
-								className="form-control"
+								className="form-control purple "
 								id="exampleInputPassword1"
 								name="password"
 							/>
 						</div>
-						<button type="submit" className="btn btn-dark">Submit</button>
+						<button type="submit" className="btn btn-dark purple text-light font-weight-bold">Submit</button>
 					</form>
 				</section>
 			</div>
