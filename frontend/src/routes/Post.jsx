@@ -166,7 +166,7 @@ export default function Post() {
 	}
 
 	return (
-		<div className="container purple">
+		<div className="container texture purple" >
 			<div className="row justify-content-center mt-5">
 				<div className="col-6">
 					<h2 className="text-light">
@@ -175,14 +175,15 @@ export default function Post() {
 					</h2>
 					{post.media.endsWith('.mp4') ? <video src={post.media} controls alt={post.caption} ></video> : post.media.endsWith('.mp3') ? <audio src={post.media} controls alt={post.caption} /> : <img src={post.media} className="img-fluid" alt={post.caption}  />}
 					<div className="row justify-content-between">
-						{/* <h3 className="col-3">Likes: {post.likes}</h3> */}
+						
 						{post.user === user._id && (
 							<>
 								<div className="btn-group col-4" role="group" aria-label="Post Actions">
-									{/* <button action={`/api/post/likePost/${post._id}?_method=PUT`} method="POST" className="btn btn-primary fa fa-heart" type="submit" onClick={handleLike}></button> */}
+									 <button action={`/api/post/likePost/${post._id}?_method=PUT`} method="POST" className="btn btn-primary fa fa-heart" type="submit" onClick={handleLike}></button> 
 									<button type="button" className="btn btn-warning fa fa-edit" data-bs-toggle="modal" data-bs-target="#editPost"></button>
 									<button action={`/api/post/deletePost/${post._id}?_method=DELETE`} method="POST" className="btn btn-danger fa fa-trash" type="submit" onClick={handleDelete}></button>
 								</div>
+								 <h3 className="col-3 text-light">Likes {post.likes}</h3> 
 								<div className="modal fade" id="editPost" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 									<div className="modal-dialog">
 										<form className="modal-content" encType="multipart/form-data" action={`/api/post/editPost/${post.id}?_method=PATCH`} method="POST" onSubmit={handleUpdate}>
@@ -485,42 +486,42 @@ export default function Post() {
 				</div>
 				<div className="col-3 mt-5 ">
 					
-					<p className="border px-2 bg-dark text-light"><b>Name: </b>{post.name}</p>
-					<p className="border px-2 bg-dark text-light"><b>Ancestry: </b>{post.ancestry}</p>
-					<p className="border px-2 bg-dark text-light"><b>STR: </b>{post.str}</p>
-					<p className="border px-2 bg-dark text-light"><b>INT: </b>{post.int}</p>
-					<p className="border px-2 bg-dark text-light"><b>CLASS: </b>{post.class}</p>
-					<p className="border px-2 bg-dark text-light"><b>LEVEL: </b>{post.level}</p>
-					<p className="border px-2 bg-dark text-light"><b>XP: </b>{post.xp}</p>
-					<p className="border px-2 bg-dark text-light"><b>MAX XP: </b>{post.maxXp}</p>
-					<p className="border px-2 bg-dark text-light"><b>DEX: </b>{post.dex}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>Name: </b>{post.name}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>Ancestry: </b>{post.ancestry}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>STR: </b>{post.str}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>INT: </b>{post.int}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>CLASS: </b>{post.class}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>LEVEL: </b>{post.level}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>XP: </b>{post.xp}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>MAX XP: </b>{post.maxXp}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>DEX: </b>{post.dex}</p>
 				</div>
 				<div className="col-3 mt-5 ">
-					<p className="border px-2 bg-dark text-light"><b>WIS: </b>{post.wis}</p>
-					<p className="border px-2 bg-dark text-light"><b>TITLE: </b>{post.title}</p>
-					<p className="border px-2 bg-dark text-light"><b>ALIGNMENT: </b>{post.alignment}</p>
-					<p className="border px-2 bg-dark text-light"><b>CON: </b>{post.con}</p>
-					<p className="border px-2 bg-dark text-light"><b>CHA: </b>{post.cha}</p>
-					<p className="border px-2 bg-dark text-light"><b>BACKGROUND: </b>{post.background}</p>
-					<p className="border px-2 bg-dark text-light"><b>DEITY: </b>{post.deity}</p>
-					<p className="border px-2 bg-dark text-light"><b>HP: </b>{post.hp}</p>
-					<p className="border px-2 bg-dark text-light"><b>AC: </b>{post.ac}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>WIS: </b>{post.wis}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>TITLE: </b>{post.title}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>ALIGNMENT: </b>{post.alignment}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>CON: </b>{post.con}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>CHA: </b>{post.cha}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>BACKGROUND: </b>{post.background}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>DEITY: </b>{post.deity}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>HP: </b>{post.hp}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>AC: </b>{post.ac}</p>
 				</div>	
 				<div className="col-3 mt-5 ">	
-					<div className="border px-2 bg-dark text-light">
+					<div className="border px-2 bg-dark text-light rounded">
 						<p><b>ATTACKS</b></p>
 						<p>{post.attack1}</p>
 						<p>{post.attack2}</p>
 						<p>{post.attack3}</p>
 						<p>{post.attack4}</p>
 					</div>	
-					<p className="border mt-5 px-2 bg-dark text-light"><b>GP: </b>{post.gp}</p>
-					<p className="border px-2 bg-dark text-light"><b>SP: </b>{post.sp}</p>
-					<p className="border px-2 bg-dark text-light"><b>CP: </b>{post.cp}</p>
+					<p className="border mt-5 px-2 bg-dark text-light rounded"><b>GP: </b>{post.gp}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>SP: </b>{post.sp}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>CP: </b>{post.cp}</p>
 
 				</div>
 				<div className="col-3 mt-5 ">
-					<div className="border px-2 bg-dark text-light">
+					<div className="border px-2 bg-dark text-light rounded">
 						<p><b>TALENTS</b></p>
 						<p>{post.talent1}</p>
 						<p>{post.talent2}</p>
@@ -533,7 +534,7 @@ export default function Post() {
 					</div>
 				</div>
 				<div className="col-3 mt-5 ">
-					<div className="border px-2 bg-dark text-light">
+					<div className="border px-2 bg-dark text-light rounded">
 						<p><b>SPELLS</b></p>
 						<p>{post.spell1}</p>
 						<p>{post.spell2}</p>
@@ -554,7 +555,7 @@ export default function Post() {
 					</div>
 				</div>
 				<div className="col-3 mt-5 ">	
-					<div className="border px-2 bg-dark text-light">
+					<div className="border px-2 bg-dark text-light rounded">
 						<p><b>GEAR</b></p>
 						<p>{post.gear1}</p>
 						<p>{post.gear2}</p>
@@ -580,11 +581,11 @@ export default function Post() {
 				</div>
 				
 				<div className="mt-5">
-					<h2>Add a comment</h2>
+					<h2 className="text-light">Add a comment</h2>
 					<form action={'/api/comment/createComment/' + post._id} method="POST" onSubmit={handleAddComment}>
 						<div className="mb-3">
-							<label htmlFor="text" className="form-label">Comment</label>
-							<textarea className="form-control" id="text" name="text"></textarea>
+							{/* <label htmlFor="text" className="form-label">Comment</label> */}
+							<textarea className="form-control bg-dark text-light" id="text" name="text"></textarea>
 						</div>
 						<button type="submit" className="btn btn-dark" value="Upload">Submit</button>
 					</form>
@@ -604,10 +605,10 @@ export default function Post() {
 						/>
 					))}
 				</ul>
-				<div className="col-6 mt-5">
-					<Link className="btn btn-dark mx-5" to={`/profile/` + user.userName}>Return to Profile</Link>
+				{/* <div className="col-3 my-5">
+					<Link className="btn btn-dark mx-1 " to={`/profile/` + user.userName}>Return to Profile</Link>
 					<Link className="btn btn-dark" to="/feed">Return to Feed</Link>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	)

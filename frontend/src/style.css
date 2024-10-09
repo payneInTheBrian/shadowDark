@@ -1,5 +1,39 @@
 .purple {
-    
     background-color: #704E6F;
-    
   }
+.purple-btn{
+    background-color: #704E6F;
+    color:white;
+}
+.purple-btn:hover{
+    background-color: white;
+    color: #704E6F;
+}
+.purple-head{
+    background-color: #704E6F;
+    background-image: url("../public/cracks.jpg");
+    background-blend-mode:color-burn;
+    background-size: cover;
+}
+  .texture{
+    background-color: #704E6F;
+    background-image: url("../public/waves.jpg");
+    background-blend-mode:luminosity;
+    background-size:cover;
+    
+
+  }
+
+  .text-purple{
+
+    color: #704E6F
+  }
+  .text-purple:hover{
+    color:white;
+  }
+  .black{
+    color: black;
+  }
+.black:hover{
+    color: white;
+}

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import Messages from '../components/Messages';
 import { API_BASE } from "../constants";
+import Foot from "./Foot";
 
 export default function Root({ initialUser }) {
   const [user, setUser] = useState(initialUser);
@@ -27,15 +28,16 @@ export default function Root({ initialUser }) {
   return (
     <div className="bg-dark">
       <header className="container">
-        <div className="text-center">
-          <h1 className="text-light"><Link className="text-light" to={user ? '/profile/' + user.userName : '/'}>Shadow Dark</Link></h1>
+        <div className="text-center purple-head pb-2">
+          <h1 className=""><Link className="black fw-bold" to={user ? '/profile/' + user.userName : '/'}>Shadow Dark</Link></h1>
           
-          <h3 className="text-light">Character Creation App</h3>
+          <h3 className="black fw-bold">Character Creation App</h3>
         </div>
       </header>
       <main className="purple"></main>
 			<Messages messages={messages} />
       <Outlet context={{ user, setUser, setMessages }} />
+      <Foot />
     </div>
   );
 }
