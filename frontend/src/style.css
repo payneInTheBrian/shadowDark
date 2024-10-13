@@ -1,6 +1,12 @@
 .purple {
     background-color: #704E6F;
+    color:white;
   }
+  .purple:hover{
+    background-color: #212529;
+    color: #704E6F
+  }
+
 .purple-btn{
     background-color: #704E6F;
     color:white;
@@ -20,20 +26,28 @@
     background-image: url("../public/waves.jpg");
     background-blend-mode:luminosity;
     background-size:cover;
-    
-
   }
 
   .text-purple{
 
     color: #704E6F
   }
-  .text-purple:hover{
-    color:white;
-  }
+  
   .black{
     color: black;
   }
 .black:hover{
     color: white;
+}
+
+img{
+  color: white;
+  border: 1px solid white;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #704E6F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }

@@ -15,6 +15,7 @@ import { Profile } from './routes/Profile';
 import Logout from './routes/Logout';
 import Feed from './routes/Feed';
 import Post from './routes/Post';
+import { NewPost } from './routes/NewPost';
 
 const createOurRouter = process.env.REACT_APP_HASHROUTER === 'true' ? createHashRouter : createBrowserRouter;
 const router = createOurRouter([
@@ -50,6 +51,10 @@ const router = createOurRouter([
       {
         path: "/post/:id",
         element: <Post />,
+      },
+      {
+        path: "/newpost",
+        element: <NewPost />,
       },
     ]
   },

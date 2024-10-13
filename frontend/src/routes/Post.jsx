@@ -166,15 +166,17 @@ export default function Post() {
 	}
 
 	return (
-		<div className="container texture purple" >
+		<div className="container texture" >
 			<div className="row justify-content-center mt-5">
 				<div className="col-6">
 					<h2 className="text-light">
-						{post.title}
+						{post.name}
 						
 					</h2>
-					{post.media.endsWith('.mp4') ? <video src={post.media} controls alt={post.caption} ></video> : post.media.endsWith('.mp3') ? <audio src={post.media} controls alt={post.caption} /> : <img src={post.media} className="img-fluid" alt={post.caption}  />}
+					{/* {post.media.endsWith('.mp4') ? <video src={post.media} controls alt={post.caption} ></video> : post.media.endsWith('.mp3') ? <audio src={post.media} controls alt={post.caption} /> : <img src={post.media} className="img-fluid" alt={post.caption}  />} */}
+					{post.media ? <img src={post.media} className="img-fluid" alt={post.name}  /> : <h3 className="border rounded bg-dark text-purple mx-4 my-4 px-3 py-3 ">{post.name}</h3>}
 					<div className="row justify-content-between">
+					
 						
 						{post.user === user._id && (
 							<>
@@ -195,6 +197,10 @@ export default function Post() {
 												<div className="mb-3">
 													<label htmlFor="name" className="form-label">Name</label>
 													<input type="text" className="form-control" id="name" name="name" defaultValue={post.name} />
+												</div>
+												<div className="mb-3">
+													<label htmlFor="title" className="form-label">Title</label>
+													<input type="text" className="form-control" id="title" name="title" defaultValue={post.title} />
 												</div>
 												<div className="mb-3">
 													<label htmlFor="ancestry" className="form-label">Ancestry</label>
@@ -486,7 +492,7 @@ export default function Post() {
 				</div>
 				<div className="col-3 mt-5 ">
 					
-					<p className="border px-2 bg-dark text-light rounded"><b>Name: </b>{post.name}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>Title: </b>{post.title}</p>
 					<p className="border px-2 bg-dark text-light rounded"><b>Ancestry: </b>{post.ancestry}</p>
 					<p className="border px-2 bg-dark text-light rounded"><b>STR: </b>{post.str}</p>
 					<p className="border px-2 bg-dark text-light rounded"><b>INT: </b>{post.int}</p>
