@@ -56,10 +56,13 @@ module.exports = {
   createPost: async (req, res) => {
     try {
       // Upload image to cloudinary
+      if (req.file) {
        const result = await cloudinary.uploader.upload(req.file.path, {
          resource_type: "auto",
-       });
-
+       })}
+       else {
+        result = "";
+       }
       const post = await Post.create({
         name: req.body.name,
         ancestry: req.body.ancestry,
@@ -78,6 +81,7 @@ module.exports = {
         background: req.body.background,
         deity: req.body.deity,
         hp: req.body.hp,
+        maxHp: req.body.maxHp,
         ac: req.body.ac,
         attack1: req.body.attack1,
         attack2: req.body.attack2,
@@ -196,7 +200,7 @@ module.exports = {
         populate: { path: 'user' }
       });
       if (post.deletedAt) return res.status(404).end();
-      for (const key of ['name', 'ancestry', 'str', 'int', 'class', 'level', 'xp', 'maxXp', 'dex', 'wis', 'title', 'alignment', 'con', 'cha', 'background', 'deity', 'hp', 'ac', 'attack1', 'attack2', 'attack3', 'attack4', 'talent1',  'talent2', 'talent3', 'talent4', 'talent5', 'talent6', 'talent7', 'talent8', 'spell1', 'spell2', 'spell3', 'spell4', 'spell5', 'spell6', 'spell7', 'spell8', 'spell9', 'spell10', 'spell11', 'spell12', 'spell13', 'spell14', 'spell15', 'spell16', 'gear1', 'gear2', 'gear3', 'gear4', 'gear5', 'gear6', 'gear7', 'gear8', 'gear9', 'gear10', 'gear11', 'gear12', 'gear13', 'gear14', 'gear15', 'gear16', 'gear17', 'gear18', 'gear19', 'gear20', 'gp', 'sp', 'cp',   ]){
+      for (const key of ['name', 'ancestry', 'str', 'int', 'class', 'level', 'xp', 'maxXp', 'dex', 'wis', 'title', 'alignment', 'con', 'cha', 'background', 'deity', 'hp', 'maxHp', 'ac', 'attack1', 'attack2', 'attack3', 'attack4', 'talent1',  'talent2', 'talent3', 'talent4', 'talent5', 'talent6', 'talent7', 'talent8', 'spell1', 'spell2', 'spell3', 'spell4', 'spell5', 'spell6', 'spell7', 'spell8', 'spell9', 'spell10', 'spell11', 'spell12', 'spell13', 'spell14', 'spell15', 'spell16', 'gear1', 'gear2', 'gear3', 'gear4', 'gear5', 'gear6', 'gear7', 'gear8', 'gear9', 'gear10', 'gear11', 'gear12', 'gear13', 'gear14', 'gear15', 'gear16', 'gear17', 'gear18', 'gear19', 'gear20', 'gp', 'sp', 'cp',   ]){
         if (req.body[key] === post[key]) continue;
         post[key] = req.body[key];
         post.edited = true;

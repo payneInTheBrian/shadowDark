@@ -15,71 +15,75 @@ const PostSchema = new mongoose.Schema({
   },
   ancestry: {
     type: String,
-    required: true,
+    required: false,
   },
   str: {
     type: Number,
-    required: true,
+    required: false,
   },
   int: {
     type: Number,
-    required: true,
+    required: false,
   },
   class: {
     type: String,
-    required: true,
+    required: false,
   },
   level: {
     type: Number,
-    required: true,
+    required: false,
   },
   xp: {
     type: Number,
-    required: true,
+    required: false,
   },
   maxXp: {
     type: Number,
-    required: true,
+    required: false,
   },
   dex: {
     type: Number,
-    required: true,
+    required: false,
   },
   wis: {
     type: Number,
-    required: true,
+    required: false,
   },
   title: {
     type: String,
-    required: true,
+    required: false,
   },
   alignment: {
     type: String,
-    required: true,
+    required: false,
   },
   con: {
     type: Number,
-    required: true,
+    required: false,
   },
   cha: {
     type: Number,
-    required: true,
+    required: false,
   },
   background: {
     type: String,
-    required: true,
+    required: false,
   },
   deity: {
     type: String,
-    required: true,
+    required: false,
   },
   hp: {
     type: Number,
-    required: true,
+    required: false,
+  },
+  maxHp: {
+    type: Number,
+    required: false,
   },
   ac: {
     type: Number,
-    required: true,
+    required: false,
   },
   attack1: {
     type: String,

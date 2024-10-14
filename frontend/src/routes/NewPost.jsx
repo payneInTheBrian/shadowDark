@@ -43,8 +43,9 @@ export function NewPost() {
 					
 						
 						<form action="/api/post/createPost" encType="multipart/form-data" method="POST" onSubmit={handleSubmit}>   
-							<h2>Create a new character</h2>
-							<div className="row text-light"> 
+							
+							<div className="row text-light mx-5 my-4 d-flex justify-content-center"> 
+							<h2 className="text-center">Create a new character</h2>
 							<div className="mb-3 ">
 								<label htmlFor="imgUpload purple" className="form-label">Media</label>
 								<input type="file" className="form-control purple" id="imageUpload" name="file" />
@@ -117,6 +118,10 @@ export function NewPost() {
 							<div className="mb-3">
 								<label htmlFor="hp" className="form-label text-light">Hp</label>
 								<input type="text" className="form-control purple" id="hp" name="hp"/>
+							</div>
+							<div className="mb-3">
+								<label htmlFor="maxHp" className="form-label text-light">Max Hp</label>
+								<input type="text" className="form-control purple" id="maxHp" name="maxHp"/>
 							</div>
 							<div className="mb-3">
 								<label htmlFor="ac" className="form-label text-light">AC</label>
@@ -328,7 +333,7 @@ export function NewPost() {
 								<input type="text" className="form-control purple" id="cp" name="cp"/>
 							</div>
 
-							<button type="submit" className="btn btn-dark mb-5 purple text-light" value="Upload">Submit</button>
+							<button type="submit" className="btn my-5 purple-btn col-3 text-center fw-bold" value="Upload">Submit</button>
                             </div>
                         </form>
 					

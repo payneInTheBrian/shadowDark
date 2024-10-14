@@ -169,9 +169,8 @@ export default function Post() {
 		<div className="container texture" >
 			<div className="row justify-content-center mt-5">
 				<div className="col-6">
-					<h2 className="text-light">
+					<h2 className="text-light text-center">
 						{post.name}
-						
 					</h2>
 					{/* {post.media.endsWith('.mp4') ? <video src={post.media} controls alt={post.caption} ></video> : post.media.endsWith('.mp3') ? <audio src={post.media} controls alt={post.caption} /> : <img src={post.media} className="img-fluid" alt={post.caption}  />} */}
 					{post.media ? <img src={post.media} className="img-fluid" alt={post.name}  /> : <h3 className="border rounded bg-dark text-purple mx-4 my-4 px-3 py-3 ">{post.name}</h3>}
@@ -265,6 +264,10 @@ export default function Post() {
 												<div className="mb-3">
 													<label htmlFor="hp" className="form-label">Hp</label>
 													<input type="text" className="form-control" id="hp" name="hp" defaultValue={post.hp} />
+												</div>
+												<div className="mb-3">
+													<label htmlFor="maxHp" className="form-label">Max Hp</label>
+													<input type="text" className="form-control" id="maxHp" name="maxHp" defaultValue={post.maxHp} />
 												</div>
 												<div className="mb-3">
 													<label htmlFor="ac" className="form-label">Ac</label>
@@ -498,8 +501,8 @@ export default function Post() {
 					<p className="border px-2 bg-dark text-light rounded"><b>INT: </b>{post.int}</p>
 					<p className="border px-2 bg-dark text-light rounded"><b>CLASS: </b>{post.class}</p>
 					<p className="border px-2 bg-dark text-light rounded"><b>LEVEL: </b>{post.level}</p>
-					<p className="border px-2 bg-dark text-light rounded"><b>XP: </b>{post.xp}</p>
-					<p className="border px-2 bg-dark text-light rounded"><b>MAX XP: </b>{post.maxXp}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>XP: </b>{post.xp} / {post.maxXp}</p>
+					
 					<p className="border px-2 bg-dark text-light rounded"><b>DEX: </b>{post.dex}</p>
 				</div>
 				<div className="col-3 mt-5 ">
@@ -510,7 +513,7 @@ export default function Post() {
 					<p className="border px-2 bg-dark text-light rounded"><b>CHA: </b>{post.cha}</p>
 					<p className="border px-2 bg-dark text-light rounded"><b>BACKGROUND: </b>{post.background}</p>
 					<p className="border px-2 bg-dark text-light rounded"><b>DEITY: </b>{post.deity}</p>
-					<p className="border px-2 bg-dark text-light rounded"><b>HP: </b>{post.hp}</p>
+					<p className="border px-2 bg-dark text-light rounded"><b>HP: </b>{post.hp} / {post.maxHp}</p>
 					<p className="border px-2 bg-dark text-light rounded"><b>AC: </b>{post.ac}</p>
 				</div>	
 				<div className="col-3 mt-5 ">	

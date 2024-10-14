@@ -43,7 +43,7 @@ export default function Signup() {
 							<label htmlFor="confirmPassword" className="form-label text-light">Confirm Password</label>
 							<input type="password" className="form-control purple" id="confirmPassword" name="confirmPassword" />
 						</div>
-						<button type="submit" className="btn purple text-light fw-bold">Submit</button>
+						<button type="submit" className="btn purple-btn fw-bold">Submit</button>
 					</form>
 				</section>
 			</div>

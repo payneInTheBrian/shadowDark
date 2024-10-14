@@ -40,13 +40,13 @@ export function Profile() {
 
 
 	return (
-		<div className="container">
+		<div className="container min-vh-100">
 			<div className="row ">
 				<div className=" text-light">
 					<div>
-						<p><strong>Welcome back</strong> {user.userName}</p>
-						<p><strong>Email</strong>: {user.email}</p>
-						<Link className="btn purple text-light" to="/newpost">Add a new Character</Link>
+						<h3 className="my-3"><strong>Welcome back</strong> {user.userName}</h3>
+						{/* <p><strong>Email</strong>: {user.email}</p> */}
+						<Link className="btn purple-btn fw-bold" to="/newpost">New Character</Link>
 						
 					</div>
 					<div className="mt-5">
@@ -56,7 +56,7 @@ export function Profile() {
 						{/* <Link className="btn purple text-light col-2 " to="/feed">Return</Link> */}
 						
 						{loggedInUser?._id === user._id
-							? <Link to="/logout" className="col-2 btn purple font-weight-bold text-light">Logout</Link>
+							? <Link to="/logout" className="col-2 btn purple-btn fw-bold">Logout</Link>
 							: null}
 					</div>
 				</div>

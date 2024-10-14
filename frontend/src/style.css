@@ -18,29 +18,32 @@
 .purple-head{
     background-color: #704E6F;
     background-image: url("../public/cracks.jpg");
-    background-blend-mode:color-burn;
+    background-blend-mode:multiply;
     background-size: cover;
 }
-  .texture{
-    background-color: #704E6F;
-    background-image: url("../public/waves.jpg");
-    background-blend-mode:luminosity;
-    background-size:cover;
-  }
+.texture{
+  background-color: #704E6F;
+  background-image: url("../public/waves.jpg");
+  background-blend-mode:luminosity;
+  background-size:cover;
+}
 
-  .text-purple{
+.text-purple{
 
-    color: #704E6F
-  }
+  color: #704E6F
+}
+.text-purple :hover{
+  color: white;
+}
   
-  .black{
-    color: black;
-  }
-.black:hover{
+.black{
+  color: #1D191A;
+}
+h1 :hover{
     color: white;
 }
 
-img{
+.img-alt{
   color: white;
   border: 1px solid white;
   border-radius: 1rem;
@@ -50,4 +53,19 @@ img{
   justify-content: center;
   align-items: center;
 
+}
+
+img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+link :hover{
+  color: white;
+}
+
+a:hover {
+  color:white;
 }
