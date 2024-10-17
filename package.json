@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Character Creator",
   "main": "server.js",
+  "engines": {
+    "node": "22.9.0"
+  },
   "scripts": {
     "start": "nodemon server.js",
     "build": "npm --prefix frontend run build",
