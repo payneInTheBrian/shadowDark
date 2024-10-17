@@ -7,7 +7,7 @@
     "node": "22.9.0"
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "nodemon --optimize_for_size --max_old_space_size=460 server.js",
     "build": "npm --prefix frontend run build",
     "postinstall": "npm --prefix frontend install",
     "test": "echo \"Error: no test specified\" && exit 1"
