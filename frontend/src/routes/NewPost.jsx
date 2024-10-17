@@ -27,10 +27,6 @@ export function NewPost() {
 		}
 		navigate(-1);
 	};
-
-	// const handleClick = () => {
-	// 	this.="text-purple"
-	// }
 	
 
 

@@ -6,7 +6,9 @@
     background-color: #212529;
     color: #704E6F
   }
-
+.dark-purple{
+  background-color: #1D191A;
+}
 .purple-btn{
     background-color: #704E6F;
     color:white;
@@ -52,6 +54,9 @@ h1 :hover{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("../public/waves.jpg");
+  background-blend-mode:luminosity;
+  background-size:cover;
 
 }
 
