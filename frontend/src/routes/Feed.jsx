@@ -15,16 +15,17 @@ export default function Feed() {
 
 	const handleTabChange = (e) => {
 		setTab(e.target.textContent.toLowerCase());
+		
 	};
 
 	return (
 		<div className="container min-vh-100">
 			<ul className="nav nav-pills nav-fill" role="tablist">
-				<li className="nav-item">
-					<button className={`nav-link` + (tab === 'public' ? ' active' : '')} role="tab" aria-selected={tab === 'public'} onClick={handleTabChange}>Public</button>
+				<li className="nav-item dark-purple rounded mx-1">
+					<button className={`nav-link purple` + (tab === 'public' ? ' active'  : '')} role="tab" aria-selected={tab === 'public'} onClick={handleTabChange}>Public</button>
 				</li>
-				<li className="nav-item">
-					<button className={`nav-link` + (tab === 'following' ? ' active' : '')} role="tab" aria-selected={tab === 'following'} onClick={handleTabChange}>Following</button>
+				<li className="nav-item dark-purple rounded mx-1">
+					<button className={`nav-link purple` + (tab === 'following' ? ' active' : '')} role="tab" aria-selected={tab === 'following'} onClick={handleTabChange}>Your Group</button>
 				</li>
 			</ul>
 			<div className="row justify-content-center mt-5">

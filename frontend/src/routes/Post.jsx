@@ -189,11 +189,11 @@ export default function Post() {
 									<button action={`/api/post/deletePost/${post._id}?_method=DELETE`} method="POST" className="btn btn-danger fa fa-trash" type="submit" onClick={handleDelete}></button>
 								</div>
 								 <h3 className="col-3 text-light">Likes {post.likes}</h3> 
-								<div className="modal fade" id="editPost" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div className="modal fade" id="editPost" tabIndex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
 									<div className="modal-dialog bg-dark">
 										<form className="modal-content" encType="multipart/form-data" action={`/api/post/editPost/${post.id}?_method=PATCH`} method="POST" onSubmit={handleUpdate}>
 											<div className="modal-header purple">
-												<h5 className="modal-title" id="exampleModalLabel">Edit Character</h5>
+												<h5 className="modal-title" id="editModalLabel">Edit Character</h5>
 												<button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Cancel"></button>
 											</div>
 											<div className="modal-body dark-purple">

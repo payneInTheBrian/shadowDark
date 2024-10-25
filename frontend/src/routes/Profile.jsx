@@ -46,18 +46,24 @@ export function Profile() {
 					<div>
 						<h3 className="my-3"><strong>Welcome back</strong> {user.userName}</h3>
 						{/* <p><strong>Email</strong>: {user.email}</p> */}
-						<Link className="btn purple-btn fw-bold" to="/newpost">New Character</Link>
-						
+						<div className="row justify-content-around">
+							<Link className="btn purple-btn fw-bold col-2" to="/newpost">New Character</Link>
+							
+							{loggedInUser?._id === user._id
+							? <Link to="/logout" className="col-2 btn purple-btn fw-bold">Logout</Link>
+							: null}
+						</div>
 					</div>
+					
 					<div className="mt-5">
 						<h2 className="text-center">Characters</h2>
 						<PostList posts={posts} />
 					<div className="row justify-content-center mt-5">
 						{/* <Link className="btn purple text-light col-2 " to="/feed">Return</Link> */}
 						
-						{loggedInUser?._id === user._id
+						{/* {loggedInUser?._id === user._id
 							? <Link to="/logout" className="col-2 btn purple-btn fw-bold">Logout</Link>
-							: null}
+							: null} */}
 					</div>
 				</div>
 				<div className="col-6">

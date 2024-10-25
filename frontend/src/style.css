@@ -50,6 +50,7 @@ h1 :hover{
   border: 1px solid white;
   border-radius: 1rem;
   padding: 1rem;
+  margin: .5rem;
   background-color: #704E6F;
   display: flex;
   justify-content: center;
